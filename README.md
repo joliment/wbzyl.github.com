@@ -1,6 +1,9 @@
 # Szablon dla bloga
 
-TODO
+>> "Computer class" can't be about teaching to use today's software;
+>> it must be about teaching o make tomorrow's software.
+>> <small>Douglas Rushkoff</small>
+
 
 ## Instalacja szablonu
 
@@ -13,19 +16,19 @@ cd my_blog
 </pre>
 
 
-## Piszemy pierwszy artykuł?
+## Piszemy pierwszy post
 
-Wpisy do bloga umieszczamy w katalogu `_posts`.
+Posty umieszczamy w katalogu `_posts`.
 Nazwy plików z postami tworzymy według schematu:
 
     rok-miesiąc-dzień-tytuł.md
 
-na przykład:
+Przykładowo:
 
     2013-02-29-jekyll-howto.md
 
 Po napisaniu posta generujemy statyczną wersję bloga wykonując
-z katalogu z blogiem, czyli z katalogu **blog/** polecenie:
+z katalogu z blogiem, czyli z katalogu **my_blog/** polecenie:
 
     jekyll --server PORT # testowanie, localhost:PORT
 
