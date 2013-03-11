@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Jekyll-Blog HOWTO
+title: Jekyll HOWTO
 tags: [jekyll, example]
 description: "przykładowy post"
 ---
@@ -29,39 +29,48 @@ HTMl tekst.
 
 [markdownr]: http://markdownr.com/ "markdown online previewer"
 
-
-## Kolorowanie kodu
+## Podkolorowywanie kodu
 
 Kod wpisujemy tak:
 
-<pre>
-&#123;% highlight ruby %&#125;
-def foo
-  puts 'foo'
+<pre>&#x60;&#x60;&#x60;ruby
+module Invisibility
+  def hide
+    @visible = false
+  end
+  def show
+    @visible = true
+  end
 end
-&#123;% endhighlight %&#125;
+&#x60;&#x60;&#x60;
 </pre>
 
 A tak to wygląda po podkolorowaniu:
 
-{% highlight ruby %}
-def foo
-  puts 'foo'
+```ruby
+module Invisibility
+  def hide
+    @visible = false
+  end
+  def show
+    @visible = true
+  end
 end
-{% endhighlight %}
+```
 
-Aby podkolorować kod Jekyll wywołuje program
+Do kolorowania kodu Jekyll korzysta z programu
 [pygmentize](http://pygments.org/docs/cmdline/).
+Po instalacji tego programu polecenie:
 
-Wykonanie polecenia:
-
-    pygmentize -L lexers
-    ...
-    * css+erb, css+ruby:
-    * erb:
-    * js+erb, javascript+erb, js+ruby, javascript+ruby:
-    * rhtml, html+erb, html+ruby:
-    * xml+erb, xml+ruby
-    ...
-
-wypisuje listę obsługiwanych języków programowania.
+```sh
+pygmentize -L lexers
+  ...
+  * css+erb, css+ruby:
+  * erb:
+  * js+erb, javascript+erb, js+ruby, javascript+ruby:
+  * rhtml, html+erb, html+ruby:
+  * xml+erb, xml+ruby
+  ...
+```
+wypisze nam listę nazw języków programowania rozpoznawanych
+przez *pygmentize*.
