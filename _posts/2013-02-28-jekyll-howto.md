@@ -7,7 +7,7 @@ description: "Przykładowy post"
 ---
 
 <blockquote>
-<img src="/images/alan-perlis.png" alt="[Alan Perlis]" />
+<img src="{{ site.baseurl }}/images/alan-perlis.png" alt="[Alan Perlis]" />
 <p>
   Dealing with failure is easy: Work hard to improve. Success is also
   easy to handle: You've solved the wrong problem. Work hard to improve.
