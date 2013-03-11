@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>WB@//{{ page.title }}</title>
+    <title>wb://{{ page.title }}</title>
 
     <link rel="stylesheet" href="{{ site.baseurl }}/stylesheets/styles.css">
     <link rel="stylesheet" href="{{ site.baseurl }}/stylesheets/pygment_trac.css">
@@ -17,13 +17,13 @@
   <body>
     <div class="wrapper">
       <header>
-        <h1 class="header">wb@blog</h1>
+        <h1 class="header">wb://blog</h1>
         <time>{{ page.published }}</time>
         <p class="header">by Włodek Bzyl</p>
       </header>
       {{ content }}
       <footer>
-        <p><small><a href="http://tao.inf.ug.edu.pl">Home</a></small></p>
+        <p><small><a href="http://tao.inf.ug.edu.pl"><img src="{{ site.baseurl }}/images/home.png"></a></small></p>
         <p><small>Hosted on <a href="https://pages.github.com">GitHub Pages</a> using the Dinky theme</small></p>
       </footer>
     </div>
