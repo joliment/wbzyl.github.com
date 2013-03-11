@@ -43,8 +43,7 @@ baseurl: /repository_name
 
 User/Organization/Repository pages:
 
-    jekyll --server PORT # testowanie, localhost:PORT
-
+    jekyll --server PORT --auto # testowanie, localhost:PORT
 
 
 ## TODO: Wdrażamy bloga na Githubie
@@ -77,4 +76,6 @@ Pushing local branch named *dinky-theme* to remote (github repo):
 
 ```sh
 git push origin dinky-theme
+git checkout dinky-theme -- README.md
+git diff master:README.md dinky-theme:README.md
 ```
