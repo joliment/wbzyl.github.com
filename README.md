@@ -1,8 +1,9 @@
 # Szablon dla bloga
 
->> "Computer class" can't be about teaching to use today's software;
->> it must be about teaching o make tomorrow's software.
->> <small>Douglas Rushkoff</small>
+> „Computer class” can’t be about teaching to use today’s software;<br>
+> it must be about teaching o make tomorrow’s software.
+>
+> *Douglas Rushkoff*
 
 
 ## Instalacja szablonu
