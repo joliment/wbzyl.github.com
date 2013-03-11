@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Jekyll HOWTO
+published: "3 marca 2013"
 tags: [jekyll, example]
 description: "przykładowy post"
 ---
@@ -11,7 +12,7 @@ description: "przykładowy post"
   Dealing with failure is easy: Work hard to improve. Success is also
   easy to handle: You've solved the wrong problem. Work hard to improve.
 </p>
-<p class="author">— Alan Perlis</p>
+<p class="source">— Alan Perlis</p>
 </blockquote>
 
 # {{ page.title }}
