@@ -13,7 +13,7 @@ end
 desc "Deploy dinky-theme branch to wbzyl.github.com master branch"
 task :deploy do
   #     git push remote_name source_ref:destination_ref
-  puts "git push github +dinky-theme:master"
+  sh "git push github +dinky-theme:master"
 end
 
 desc "Deploy dinky-theme branch to gh-pages wbzyl/test repo"
