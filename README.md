@@ -31,10 +31,23 @@ Przykładowo:
 Po napisaniu posta generujemy statyczną wersję bloga wykonując
 z katalogu z blogiem, czyli z katalogu **my_blog/** polecenie:
 
+If Repository pages, add to *_config.yml*:
+
+```yaml
+baseurl: /repository_name
+```
+
+User/Organization/Repository pages:
+
     jekyll --server PORT # testowanie, localhost:PORT
 
 
+
 ## TODO: Wdrażamy bloga na Githubie
+
+* [Creating Project Pages manually](https://help.github.com/articles/creating-project-pages-manually)
+* [Sample Rakefile](https://github.com/gitready/gitready/blob/en/Rakefile)
+* *_config.yml* – *baseurl*
 
 Jeśli wszystko jest OK, to wdrażamy bloga na Github:
 
@@ -48,5 +61,16 @@ Po wykonaniu polecenia blog jest dostępny tutaj:
 
 ## TODO: Korzystamy z rozszerzeń
 
+* [Template Data](https://github.com/mojombo/jekyll/wiki/template-data)
+
 Jak? Opisane jest to [README](http://github.com/rfelix/jekyll_ext)
 *jekyll_ext*.
+
+
+## Ściągawka z Gita
+
+Pushing local branch named *dinky-theme* to remote (github repo):
+
+```sh
+git push origin dinky-theme
+```
