@@ -3,30 +3,20 @@ task :css do
   sh "lessc _less/blog.less > stylesheets/blog.css"
 end
 
-desc "Deploy site to GH-PAGES"
-task :deploy do
-  puts "Please EDIT the :deploy task."
+# ----
+
+desc "Setup: add wbzyl/wbzyl.github.com.git as remote"
+task :setup do
+  sh "git remote add github git@github.com:wbzyl/wbzyl.github.com.git"
 end
 
-desc "publish BRANCH to REPO"
-task :publish do
-  puts "git push ??? REPO:gh-pages"
-  # system("git push dinky-theme DESTINATION:gh-pages")
-end
-
-# desc "setup all repos"
-# git remote add github git@github.com:wbzyl/wbzyl.github.com.git
-
-desc "deploy branch dinky-theme to wbzyl.github.com master branch"
+desc "Deploy dinky-theme branch to wbzyl.github.com master branch"
 task :deploy do
   #     git push remote_name source_ref:destination_ref
-  puts "git push github      dinky-theme:master"
-  # system("git push dinky-theme DESTINATION:gh-pages")
+  puts "git push github +dinky-theme:master"
 end
 
-# desc "publish to all branches"
-# task :publish do
-#   LANGS.each do |lang|
-#     system("git push #{lang} #{lang}:gh-pages")
-#   end
-# end
+desc "Deploy dinky-theme branch to gh-pages wbzyl/test repo"
+task :deploy_to_repo do
+    sh "git push origin dinky-theme:gh-pages"
+end
