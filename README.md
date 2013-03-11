@@ -1,4 +1,4 @@
-# Szablon dla bloga
+# Szablon Bloga dla generatora Jekyll
 
 > „Computer class” can’t be about teaching to use today’s software;<br>
 > it must be about teaching o make tomorrow’s software.
@@ -6,16 +6,20 @@
 > *Douglas Rushkoff*
 
 
-## Instalacja szablonu
+## TODO: Instalacja szablonu
 
-1. Forkujemy repo klikając w ikonkę **fork**.
-1. Klonujemy sforkowane repo na swój komputer.
+1. Klikamy i pobieramy archiwum zip.
+1. Rozpakowujemy do pustego katalogu:
+
+Na przykład:
+```sh
+unzip ...
+```
 
 Cała procedura może wyglądać tak:
 <pre>git clone git@github.com:⟨twój login na <b>githubie</b>⟩/jekyll-template.git my_blog
 cd my_blog
 </pre>
-
 
 ## Piszemy pierwszy post
 

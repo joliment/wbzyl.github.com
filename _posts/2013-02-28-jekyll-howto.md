@@ -17,12 +17,11 @@ description: "Przykładowy post"
 
 # {{ page.title }}
 
-
-## Markdown
-
-Posty wpisujemy używając notacji Markdown.
-Notacja jest opisana przez autora Johna Grubera
-w witrynie [Daring Fireball](http://daringfireball.net/projects/markdown/syntax).
+Posty wpisujemy używając notacji
+[Github Flavored Markdown](https://help.github.com/articles/github-flavored-markdown).
+Notacja Markdown jest opisana
+w artykule [Markdown: Syntax](http://daringfireball.net/projects/markdown/syntax)
+na blogu Johna Grubera  „Daring Fireball”.
 
 Na stronie [Markdownr] [] można wpisywać tekst w notacji Markdown
 w jednym okienku, mając w drugim — podgląd na skonwertowany na
