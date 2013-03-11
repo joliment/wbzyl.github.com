@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Jekyll HOWTO
+title: Ściągawka z GFM
 published: "3 marca 2013"
 tags: [jekyll, example]
 description: "przykładowy post"
