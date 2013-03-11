@@ -14,22 +14,15 @@ task :publish do
   # system("git push dinky-theme DESTINATION:gh-pages")
 end
 
+# desc "setup all repos"
+# git remote add github git@github.com:wbzyl/wbzyl.github.com.git
+
 desc "deploy branch dinky-theme to wbzyl.github.com master branch"
 task :deploy do
-  puts "??? git push origin dinky-theme:master"
+  #     git push remote_name source_ref:destination_ref
+  puts "git push github      dinky-theme:master"
   # system("git push dinky-theme DESTINATION:gh-pages")
 end
-
-# LANGS = %w[de en es fr he it ja ko nl pt-br ru sv]
-
-# desc "setup all branches"
-# task :setup do
-#   LANGS.each do |lang|
-#     system("git checkout -t -b #{lang} origin/#{lang}")
-#     system("git remote add #{lang} git@github.com:gitready/#{lang}.git")
-#   end
-#   system("git checkout en")
-# end
 
 # desc "publish to all branches"
 # task :publish do
