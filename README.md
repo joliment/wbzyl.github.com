@@ -34,7 +34,7 @@ z katalogu z blogiem, czyli z katalogu **my_blog/** polecenie:
     jekyll --server PORT # testowanie, localhost:PORT
 
 
-## Wdrażamy bloga na Githubie
+## TODO: Wdrażamy bloga na Githubie
 
 Jeśli wszystko jest OK, to wdrażamy bloga na Github:
 
@@ -46,7 +46,7 @@ Po wykonaniu polecenia blog jest dostępny tutaj:
 </pre>
 
 
-## Korzystamy z rozszerzeń
+## TODO: Korzystamy z rozszerzeń
 
 Jak? Opisane jest to [README](http://github.com/rfelix/jekyll_ext)
 *jekyll_ext*.
