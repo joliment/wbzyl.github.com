@@ -3,7 +3,7 @@ layout: post
 title: Ściągawka z GFM
 published: "3 marca 2013"
 tags: [jekyll, example]
-description: "przykładowy post"
+description: "Przykładowy post"
 ---
 
 <blockquote>
