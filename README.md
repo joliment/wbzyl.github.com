@@ -1,7 +1,7 @@
 # Szablon Bloga dla generatora Jekyll
 
 > „Computer class” can’t be about teaching to use today’s software;<br>
-> it must be about teaching o make tomorrow’s software.
+> it must be about teaching kids to make tomorrow’s software.
 >
 > *Douglas Rushkoff*
 
