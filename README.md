@@ -6,14 +6,14 @@
 > *Douglas Rushkoff*
 
 
-## TODO: Instalacja szablonu
+## Instalacja szablonu
 
-1. Klikamy i pobieramy archiwum zip.
-1. Rozpakowujemy do pustego katalogu:
+1. Wchodzimy na stronę []() skąd pobieramy archiwum ZIP lub TAR.
+1. Rozpakowujemy archiwum:
 
-Na przykład:
 ```sh
-unzip ...
+unzip
+tar zxvf
 ```
 
 Cała procedura może wyglądać tak:
