@@ -8,18 +8,41 @@
 
 ## Instalacja szablonu
 
-1. Wchodzimy na stronę []() skąd pobieramy archiwum ZIP lub TAR.
-1. Rozpakowujemy archiwum:
+- Rejestrujemy się na serverze *github.com*
+  (wybieramy *Free Plan**) i logujemy się na swoim koncie.
+- Tworzymy nowe repozytorium o nazwie *TWÓJ_LOGIN.github.com*.
+- Wchodzimy na stronę [wb://blog](http://wbzyl.github.com/)
+  skąd pobieramy archiwum ZIP lub TAR.
+- Rozpakowujemy archiwum, przechodzimy do utworzonego katalogu.
+  Przykładowo:
 
 ```sh
-unzip
-tar zxvf
+unzip wbzyl-jekyll-template-96be463.zip        # dla ZIP
+tar zxvf wbzyl-jekyll-template-96be463.tar.gz  # dla TAR
+cd wbzyl-jekyll-template-96be463
 ```
 
-Cała procedura może wyglądać tak:
-<pre>git clone git@github.com:⟨twój login na <b>githubie</b>⟩/jekyll-template.git my_blog
-cd my_blog
-</pre>
+- Edytujemy *tasks* w pliku *Rakefile*
+  (zamieniamy *wbzyl* na *TWÓJ_LOGIN*):
+
+```ruby
+desc "Setup: add TWÓJ_LOGIN/TWÓJ_LOGIN.github.com.git as remote"
+task :setup do
+  sh "git remote add github git@github.com:TWÓJ_LOGIN/TWÓJ_LOGIN.github.com.git"
+end
+
+desc "Deploy repo to wbzyl.github.com master branch"
+task :deploy do
+  sh "git push github master"
+end
+```
+
+Po kilku minutach swój blog znajdziemy tutaj:
+
+```sh
+http://TWÓJ_LOGIN.github.com/
+```
+
 
 ## Piszemy pierwszy post
 
@@ -33,49 +56,29 @@ Przykładowo:
     2013-02-29-jekyll-howto.md
 
 Po napisaniu posta generujemy statyczną wersję bloga wykonując
-z katalogu z blogiem, czyli z katalogu **my_blog/** polecenie:
+z katalogu z blogiem polecenie:
 
-If Repository pages, add to *_config.yml*:
+*Uwaga:* Dla *repository pages*, dopisujemy w *_config.yml*:
 
 ```yaml
-baseurl: /repository_name
+baseurl: /nazwa_repozytorium
 ```
 
-User/Organization/Repository pages:
-
-    jekyll --server PORT --auto # testowanie, localhost:PORT
-
-
-## TODO: Wdrażamy bloga na Githubie
-
-* [Creating Project Pages manually](https://help.github.com/articles/creating-project-pages-manually)
-* [Sample Rakefile](https://github.com/gitready/gitready/blob/en/Rakefile)
-* *_config.yml* – *baseurl*
-
-Jeśli wszystko jest OK, to wdrażamy bloga na Github:
-
-    rake deploy          # uaktualnić DESTINATION
-
-Po wykonaniu polecenia blog jest dostępny tutaj:
-
-<pre>http://⟨twój login na <b>githubie</b>⟩.github.com/
-</pre>
-
-
-## TODO: Korzystamy z rozszerzeń
-
-* [Template Data](https://github.com/mojombo/jekyll/wiki/template-data)
-
-Jak? Opisane jest to [README](http://github.com/rfelix/jekyll_ext)
-*jekyll_ext*.
-
-
-## Ściągawka z Gita
-
-Pushing local branch named *dinky-theme* to remote (github repo):
+Testujemy strony *user/organization/repository*:
 
 ```sh
-git push origin dinky-theme
-git checkout dinky-theme -- README.md
-git diff master:README.md dinky-theme:README.md
+jekyll --server PORT --auto # testowanie, localhost:PORT
 ```
+
+Jeśli wszystko jest OK, to wdrażamy bloga na Githubie:
+
+```sh
+rake deploy
+```
+
+
+## Różne rzeczy…
+
+* wdrażanie bloga na Githubie, [Creating Project Pages manually](https://help.github.com/articles/creating-project-pages-manually)
+* korzystanie z rozszerzeń, [Template Data](https://github.com/mojombo/jekyll/wiki/template-data);
+  jak? opisane jest to [README](http://github.com/rfelix/jekyll_ext) *jekyll_ext*
