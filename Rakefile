@@ -17,10 +17,10 @@ task :deploy_dinky do
   sh "git push github +dinky-theme:master"
 end
 
-desc "Deploy dinky-theme branch to gh-pages wbzyl/test repo"
-task :deploy_to_repo do
-  sh "git push origin dinky-theme:gh-pages"
-end
+# desc "Deploy dinky-theme branch to gh-pages wbzyl/test repo"
+# task :deploy_to_repo do
+#   sh "git push origin dinky-theme:gh-pages"
+# end
 
 # LESS -> CSS
 
