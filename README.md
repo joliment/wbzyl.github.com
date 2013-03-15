@@ -9,7 +9,7 @@
 ## Instalacja szablonu
 
 - Rejestrujemy się na serverze *github.com*
-  (wybieramy *Free Plan**) i logujemy się na swoim koncie.
+  (wybieramy *Free Plan*) i logujemy się na swoim koncie.
 - Tworzymy nowe repozytorium o nazwie *TWÓJ_LOGIN.github.com*.
 - Wchodzimy na stronę [wb://blog](http://wbzyl.github.com/)
   skąd pobieramy archiwum ZIP lub TAR.
