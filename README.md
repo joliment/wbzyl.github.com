@@ -22,22 +22,22 @@ tar zxvf wbzyl-jekyll-template-96be463.tar.gz  # dla TAR
 cd wbzyl-jekyll-template-96be463
 ```
 
-- Edytujemy *tasks* w pliku *Rakefile*
-  (zamieniamy *wbzyl* na *TWÓJ_LOGIN*):
+- Edytujemy te dwa *tasks* z pliku *Rakefile*
+  (zamieniasz *wbzyl* na *TWÓJ_LOGIN*):
 
 ```ruby
-desc "Setup: add TWÓJ_LOGIN/TWÓJ_LOGIN.github.com.git as remote"
+desc "Add wbzyl/wbzyl.github.com.git as remote"
 task :setup do
-  sh "git remote add github git@github.com:TWÓJ_LOGIN/TWÓJ_LOGIN.github.com.git"
+  sh "git remote add github git@github.com:wbzyl/wbzyl.github.com.git"
 end
 
-desc "Deploy repo to wbzyl.github.com master branch"
+desc "Deploy master branch to wbzyl.github.com master branch"
 task :deploy do
   sh "git push github master"
 end
 ```
 
-Po kilku minutach swój blog znajdziemy tutaj:
+Po kilku minutach znajdziesz swój blog tutaj:
 
 ```sh
 http://TWÓJ_LOGIN.github.com/
