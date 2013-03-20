@@ -1,9 +1,9 @@
-# Szablon Bloga dla generatora Jekyll
-
 > „Computer class” can’t be about teaching to use today’s software;<br>
 > it must be about teaching kids to make tomorrow’s software.
 >
 > *Douglas Rushkoff*
+
+# Szablon Bloga dla generatora Jekyll
 
 Za pomocą programu [jekyll](https://github.com/mojombo/jekyll) z plików
 z gałęzi *dinky-theme* można wygenerować bloga.
@@ -36,14 +36,20 @@ tar --strip-components=1 -C TWÓJ_LOGIN.github.com/ -zxvf /tmp/wbzyl-jekyll-temp
 cd TWÓJ_LOGIN.github.com
 ```
 
-W pliku *Rakefile* jest zapisane zadanie zadanie do
+Do pliku *Rakefile* dopisujemy zadanie ułatwiające
 wdrożenia bloga na serwerze Github:
 
 ```sh
 desc "Deploy blog to GitHub User Pages"
 task :deploy_to_user_pages do
-  sh "git push github master"
+  sh "git push user_pages master"
 end
+```
+
+i dodajemy alias *user_pages* (gdzie oczywiście wpisujemy swój login):
+
+```sh
+git remote add user_pages git@github.com:TWÓJ_LOGIN/TWÓJ_LOGIN.github.com.git
 ```
 
 Po chwili wdrożony blog powinien być dostępny tutaj:
@@ -85,8 +91,7 @@ task :deploy_to_xxl_repo do
 end
 ```
 
-
-# Piszemy pierwszy post
+## Piszemy pierwszy post
 
 Posty umieszczamy w katalogu `_posts`.
 Nazwy plików z postami tworzymy według schematu:
@@ -111,6 +116,22 @@ i blog będzie dostępny stąd:
     http://localhost:4000
 
 
+## Tryb development
+
+Uruchamiamy lokalny serwer HTTP:
+
+```sh
+jekyll --server PORT --auto # testowanie, localhost:PORT
+```
+
+Jeśli wszystko jest OK, to wdrażamy bloga na Githubie:
+
+```sh
+rake deploy_to_user_pages # to User Pages
+rake deploy_to_xxl_repo   # to Project Pages
+```
+
+
 ## Różne rzeczy…
 
 * wdrażanie bloga na Githubie, [Creating Project Pages manually](https://help.github.com/articles/creating-project-pages-manually)
@@ -125,17 +146,4 @@ Dla *repository pages*, dopisujemy w *_config.yml*:
 
 ```yaml
 baseurl: /nazwa_repozytorium
-```
-
-Testujemy strony *user/organization/repository*:
-
-```sh
-jekyll --server PORT --auto # testowanie, localhost:PORT
-```
-
-Jeśli wszystko jest OK, to wdrażamy bloga na Githubie:
-
-```sh
-rake deploy_to_user_pages
-rake deploy_to_xxl_repo
 ```
