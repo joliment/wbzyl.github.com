@@ -76,7 +76,7 @@ Do pliku *Rakefile* dopisujemy zadanie ułatwiające wdrażania bloga:
 
 ```ruby
 desc "Deploy to gh-pages TWÓJ_LOGIN/REPO"
-task :deploy_to_repo do
+task :deploy_to_xxl_repo do
   sh "git push origin gh-pages"
 end
 ```
@@ -111,11 +111,11 @@ i blog będzie dostępny stąd:
 
 * wdrażanie bloga na Githubie, [Creating Project Pages manually](https://help.github.com/articles/creating-project-pages-manually)
 * korzystanie z rozszerzeń
-  - [Template Data](https://github.com/mojombo/jekyll/wiki/template-data);
+  - [Template Data](https://github.com/mojombo/jekyll/wiki/template-data)
   - howto? [README](http://github.com/rfelix/jekyll_ext) gemu *jekyll_ext*
 
 
-## 2013.03.21 – już nieaktualne
+## 2013.03.21 – już nieaktualne?
 
 Dla *repository pages*, dopisujemy w *_config.yml*:
 
@@ -132,5 +132,6 @@ jekyll --server PORT --auto # testowanie, localhost:PORT
 Jeśli wszystko jest OK, to wdrażamy bloga na Githubie:
 
 ```sh
-rake deploy
+rake deploy_to_user_pages
+rake deploy_to_xxl_repo
 ```
