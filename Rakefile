@@ -1,27 +1,33 @@
+# ----
+#
+# User Pages
+
 desc "Add wbzyl/wbzyl.github.com.git as remote"
-task :setup do
-  sh "git remote add github git@github.com:wbzyl/wbzyl.github.com.git"
+task :setup_user_pages do
+  sh "git remote add user_pages git@github.com:wbzyl/wbzyl.github.com.git"
 end
 
-desc "Deploy master branch to wbzyl.github.com master branch"
-task :deploy do
-  sh "git push github master"
+desc "Deploy DINKY THEME to wbzyl.github.com master branch"
+task :deploy_to_user_pages do
+  sh "git push user_pages +dinky-theme:master"
 end
 
 # ----
 #
-# TODO
+# Project Pages
+
+desc "Add xxl.git repo as remote"
+task :setup_project_pages do
+  sh "git remote add xxl git@github.com:wbzyl/xxl.git"
+end
 
 desc "Deploy dinky-theme branch to wbzyl.github.com master branch"
 task :deploy_dinky do
-  sh "git push github +dinky-theme:master"
+  sh "git push github +dinky-theme:gh-pages"
 end
 
-# desc "Deploy dinky-theme branch to gh-pages wbzyl/test repo"
-# task :deploy_to_repo do
-#   sh "git push origin dinky-theme:gh-pages"
-# end
-
+# ----
+#
 # LESS -> CSS
 
 desc "Compile _less/blog.less to stylesheets/blog.css (requires the less gem)"
