@@ -14,6 +14,8 @@ a przykładowa konfiguracja – *_config.yml*.
 
 ## User Pages na serwerze Github
 
+…czyli blog przypisany do konta użytkownika.
+
 Aby utworzyć swojego bloga na serwerze Github,
 wykonujemy kolejno:
 
