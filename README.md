@@ -23,7 +23,7 @@ wykonujemy kolejno:
   i klonujemy puste repozytorium na swój komputer
   do katalogu o takiej samej nazwie jak nazwa repozytorium
 - wchodzimy na stronę [wb://blog](http://wbzyl.github.com/)
-  skąd pobieramy archiwum ZIP lub TAR.
+  skąd **pobieramy archiwum ZIP lub TAR**
 - rozpakowujemy archiwum do katalogu ze sklonowanym repozytorium
 
 Na przykład, dla archiwum TAR, zapisujemy plik z archiwum
@@ -56,7 +56,9 @@ http://TWÓJ_LOGIN.github.com/
 …czyli blog przypisany do konkretnego repozytorium.
 
 Aby dodać bloga do istniejącego repozytorium o nazwie, na przykład,
-*xxl* wykonujemy kolejno:
+*xxl*, tak jak opisno powyżej archiwum TAR ze strony
+[wb://blog](http://wbzyl.github.com/) zapisujemy w katalogu */tmp*,
+a następnie wykonujemy kolejno:
 
 ```sh
 git clone https://github.com/TWÓJ_LOGIN/xxl.git
