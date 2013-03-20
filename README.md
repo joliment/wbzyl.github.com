@@ -42,14 +42,8 @@ wdrożenia bloga na serwerze Github:
 ```sh
 desc "Deploy blog to GitHub User Pages"
 task :deploy_to_user_pages do
-  sh "git push user_pages master"
+  sh "git push origin master"
 end
-```
-
-i dodajemy alias *user_pages* (gdzie oczywiście wpisujemy swój login):
-
-```sh
-git remote add user_pages git@github.com:TWÓJ_LOGIN/TWÓJ_LOGIN.github.com.git
 ```
 
 Po chwili wdrożony blog powinien być dostępny tutaj:
