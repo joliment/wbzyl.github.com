@@ -37,17 +37,19 @@ cd TWÓJ_LOGIN.github.com
 W pliku *Rakefile* jest zapisane zadanie zadanie do
 wdrożenia bloga na serwerze Github:
 
+```sh
 desc "Deploy blog to GitHub User Pages"
 task :deploy_to_user_pages do
   sh "git push github master"
 end
 ```
 
-Po kilku minutach wdrożony blog będzie dostępny tutaj:
+Po chwili wdrożony blog powinien być dostępny tutaj:
 
 ```sh
 http://TWÓJ_LOGIN.github.com/
 ```
+
 
 ## Project Pages na serwerze Github
 
@@ -70,7 +72,7 @@ Po chwili blog powinien być dostepny z tego adresu:
 
     http://TWÓJ_LOGIN.github.com/xxl/
 
-Dodajemy zadanie ułatwiające wdrażania bloga:
+Do pliku *Rakefile* dopisujemy zadanie ułatwiające wdrażania bloga:
 
 ```ruby
 desc "Deploy to gh-pages TWÓJ_LOGIN/REPO"

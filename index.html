@@ -14,40 +14,11 @@ title: "wb://blog"
   <li><a href="http://github.com/wbzyl/">Github</a>
 </ul>
 
-<h3>Instalacja szablonu</h3>
 
-<ul>
-<li>Rejestrujemy się na serverze <a href="http://github.com">GitHub</a>
-  (wybieramy <b>Free Plan</b>) i logujemy się na swoim koncie.
-<li>Tworzymy nowe repozytorium o nazwie <b>TWÓJ_LOGIN.github.com</b>.
-<li>Wchodzimy na stronę <a href="http://wbzyl.github.com/">wb://blog</a>
-  skąd pobieramy archiwum ZIP lub TAR.
-<li>Rozpakowujemy archiwum, przechodzimy do utworzonego katalogu.
-</ul>
+<h3>Jekyll template HOWTO</h3>
 
-<p>Przykładowo:</p>
-<pre>unzip wbzyl-jekyll-template-96be463.zip   # dla ZIP
-tar zxvf wbzyl-jekyll-template-96be463.tar.gz  # dla TAR
-cd wbzyl-jekyll-template-96be463
-</pre>
-
-<p>Następnie edytujemy te dwa <i>tasks</i> z pliku <i>Rakefile</i>
-(zamieniasz <i>wbzyl</i> na <i>TWÓJ_LOGIN</i>):</p>
-<pre>desc "Add wbzyl/wbzyl.github.com.git as remote"
-task :setup do
-  sh "git remote add github git@github.com:wbzyl/wbzyl.github.com.git"
-end
-
-desc "Deploy master branch to wbzyl.github.com master branch"
-task :deploy do
-  sh "git push github master"
-end
-</pre>
-
-<p>Po kilku minutach znajdziesz swój blog tutaj:</p>
-<pre>
-http://TWÓJ_LOGIN.github.com/
-</pre>
+See the detailed description for
+<a href="https://github.com/wbzyl/jekyll-template">user and project pages</a>.
 
 
 <h3>Rather Drive Stick?</h3>
