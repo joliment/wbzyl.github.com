@@ -7,7 +7,7 @@ task :setup_user_pages do
   sh "git remote add user_pages git@github.com:wbzyl/wbzyl.github.com.git"
 end
 
-desc "Deploy DINKY THEME to wbzyl.github.com master branch"
+desc "Deploy DINKY THEME to wbzyl.github.com User Pages"
 task :deploy_to_user_pages do
   sh "git push user_pages +dinky-theme:master"
 end
@@ -17,13 +17,13 @@ end
 # Project Pages
 
 desc "Add xxl.git repo as remote"
-task :setup_project_pages do
+task :setup_xxl_project_pages do
   sh "git remote add xxl git@github.com:wbzyl/xxl.git"
 end
 
-desc "Deploy dinky-theme branch to wbzyl.github.com master branch"
-task :deploy_dinky do
-  sh "git push github +dinky-theme:gh-pages"
+desc "Deploy DINKY THEME to xxl Project Pages"
+task :deploy_to_xxl_project_pages do
+  sh "git push xxl +dinky-theme:gh-pages"
 end
 
 # ----
